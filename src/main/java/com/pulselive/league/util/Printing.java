@@ -8,6 +8,11 @@ import com.pulselive.league.beans.LeagueTableEntry;
  * @author kgiove
  */
 public class Printing {
+	
+	/**
+     * Prints the list passed as a table.
+     * @param leagueTableEntries
+     */
 	public static void print(List<LeagueTableEntry> leagueTableEntries) {
 
 		System.out.println("\n-----------------------------");

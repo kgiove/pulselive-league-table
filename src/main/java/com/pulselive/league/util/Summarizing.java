@@ -15,16 +15,16 @@ import com.pulselive.league.beans.Match;
 public class Summarizing {	
 	
 	/**
-     * Returns all the clubs
-     * @param List<Match> matches
-     * @return Set<String>
+     * Returns all the league clubs from matches.
+     * @param matches
+     * @return clubs
      */
 	public static Set<String> getClubs(final List<Match> matches) {
 		return Stream.concat(matches.stream().map(Match::getHomeTeam), matches.stream().map(Match::getAwayTeam)).collect(toSet());
 	}
 	
 	/**
-     * Returns the list filtered by team.
+     * Returns the matches filtered by team.
      * @param team
      * @param matches
      * @return matches
@@ -34,7 +34,7 @@ public class Summarizing {
 	}
 	
 	/**
-     * Returns how many victories filtered by clubs
+     * Returns the number of wins filtered by clubs
      * @param team
      * @param matches
      * @return integer
@@ -50,7 +50,7 @@ public class Summarizing {
 	}
 	
 	/**
-     * Returns how many drawn filtered by clubs
+     * Returns the number of draws filtered by clubs
      * @param team
      * @param matches
      * @return integer
@@ -62,7 +62,7 @@ public class Summarizing {
 	}
 	
 	/**
-     * Returns how many losses filtered by clubs
+     * Returns the number of losses filtered by clubs
      * @param team
      * @param matches
      * @return integer
