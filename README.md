@@ -33,6 +33,7 @@ To run the application, we can use the following command.
 ```
 
 The code above generates the following result.
+In the main class a list of matches have been passed as input. ​Each​ ​team​ ​plays​ ​a​ ​number​ ​of​ ​matches​ ​and​ ​the results​ ​of​ ​each​ ​match​ ​build​ ​that​ ​table. At the end, LeagueTableEntry​ ​objects​ ​are​ ​sorted​ ​by​ ​points,​ ​goal​ ​difference,​ ​goals​ ​for​ ​and​ ​then team​ ​names.​ ​The​ ​normal​ ​rules​ ​for​ ​scoring​ ​points​ ​apply. 
 ```
 
 [INFO] Scanning for projects...
