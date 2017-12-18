@@ -1,11 +1,12 @@
 package com.pulselive.league.util;
 
 import static java.util.Comparator.comparing;
-
 import java.util.List;
-
 import com.pulselive.league.beans.LeagueTableEntry;
 
+/**
+ * @author kgiove
+ */
 public class Sorting {
 	
 	/**

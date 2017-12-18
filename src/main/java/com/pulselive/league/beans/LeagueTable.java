@@ -15,7 +15,9 @@ public class LeagueTable {
 	private List<LeagueTableEntry> tableEntries;
 
 	public LeagueTable(final List <Match> matches) throws Exception {
-		setTableEntries(new LeagueTableGenerator(matches).getLeagueTableEntries());
+		LeagueTableGenerator generator = new LeagueTableGenerator(matches);
+		generator.populateLeagueTableEntries();
+		setTableEntries(generator.getLeagueTableEntries());
 	}
 	
 	public List<LeagueTableEntry> getTableEntries() {		

@@ -17,6 +17,9 @@ import com.pulselive.league.beans.LeagueTableEntry;
 import com.pulselive.league.beans.Match;
 import com.pulselive.league.exception.LeagueTableException;
 
+/**
+ * @author kgiove
+ */
 public class LeagueTableGenerator {
 	
 	private List<Match> matches;
@@ -27,14 +30,13 @@ public class LeagueTableGenerator {
 			throw new LeagueTableException("Matches list cannot be null or empty. Please provide with a correct input.");
 		}
 		this.matches = matches;
-	}
+	}	
 	
-	public List<LeagueTableEntry> getLeagueTableEntries() {
+	public void populateLeagueTableEntries(){
+		
 		Set<String> teams = getClubs(matches);
 		teams.forEach(team -> addLeagueTableEntry(createNewLeagueEntry(team, filterMatchesByTeam(team, matches))));
-		return leagueTableEntries;
 	}
-	
 	public LeagueTableEntry createNewLeagueEntry(final String team, final List<Match> matchesByTeam) {
 
 		int played = matchesByTeam.size();
@@ -50,6 +52,10 @@ public class LeagueTableGenerator {
 	
 	public void addLeagueTableEntry(final LeagueTableEntry leagueTableEntry) {
 		leagueTableEntries.add(leagueTableEntry);
+	}
+	
+	public List<LeagueTableEntry> getLeagueTableEntries() {
+		return leagueTableEntries;
 	}
 	
 	private static boolean isNullOrEmpty(final Collection<?> c) {

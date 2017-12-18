@@ -9,6 +9,9 @@ import java.util.stream.Stream;
 
 import com.pulselive.league.beans.Match;
 
+/**
+ * @author kgiove
+ */
 public class Summarizing {	
 	
 	/**

@@ -4,6 +4,9 @@ import java.util.List;
 
 import com.pulselive.league.beans.LeagueTableEntry;
 
+/**
+ * @author kgiove
+ */
 public class Printing {
 	public static void print(List<LeagueTableEntry> leagueTableEntries) {
 

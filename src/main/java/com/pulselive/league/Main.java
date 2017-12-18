@@ -8,7 +8,9 @@ import com.pulselive.league.beans.LeagueTable;
 import com.pulselive.league.beans.LeagueTableEntry;
 import com.pulselive.league.beans.Match;
 
-
+/**
+ * @author kgiove
+ */
 public class Main {
 	public static final List<Match> matches =
             Arrays.asList( new Match("Stoke City", "Chelsea", 2, 1),
